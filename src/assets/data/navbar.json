@@ -1,0 +1,17 @@
+  [
+    {
+      "menuGroup": [
+        {
+          "title": "Explore",
+          "menu": [],
+          "path": "/"
+        },
+        {
+            "title": "Profile",
+            "menu": [],
+            "path": "/profile"
+        }
+    ],
+    "logoPath": "/assets/img/NiftyRow-logo.png"
+    }
+  ]

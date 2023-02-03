@@ -1,0 +1,112 @@
+
+<!--=======================================
+            Footer Section Start Here
+    ========================================-->
+
+    <div class="footer-main">
+      <div class="container-fluid">
+          <div class="row row-custom">
+              <div class="col-lg-3 col-md-12 col-log-otr">
+                  <div class="col-logo-inr">
+                      <a class="logo-otr" *ngIf="this.footerData !== null">
+                          <img class="logo-img" src="{{this.footerData.logoPath}}" alt="brand-logo">
+                      </a>
+                      <ul class="icon-ul">
+                          <li class="icon-li">
+                              <a href="https://www.facebook.com/profile.php?id=100068493288180&sk=about" target="_blank" class="icon-a">
+                                  <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 28c6.627 0 12-5.373 12-12S22.627 4 16 4 4 9.373 4 16s5.373 12 12 12z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 11h-2a3 3 0 00-3 3v14M12 18h8" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                              </a>
+                          </li>
+                          <li class="icon-li">
+                              <a href="https://twitter.com/NiftyRow" target="_blank" class="icon-a">
+                                  <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 25s5-1 6-4c0 0-8-3-6-14 0 0 4 5 10 6v-2a5 5 0 019.584-2H30l-4 4c0 7-5 14-14 14-4 0-6-2-6-2z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                              </a>
+                          </li>
+                          <li class="icon-li">
+                            <a href="https://instagram.com/niftyrowarts" target="_blank" class="icon-a">
+                              <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="#999" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+                            </a>
+                          </li>
+                          <li class="icon-li">
+                              <a href="https://t.me/niftyrow" target="_blank" class="icon-a">
+                                  <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 16.859l11.24 9.89a1 1 0 001.635-.527l4.702-20.516a1 1 0 00-1.34-1.154l-23.07 9.063a1 1 0 00.17 1.911L11 16.86zM11 16.86L28.014 4.57" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.613 21.799l-3.906 3.906A1 1 0 0111 24.998v-8.14" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-2 col-md-6 col-nav-otr" *ngFor="let links of footerData.menuGroup">
+                  <div class="col-nav-inr" >
+                      <h5 class="heading-h5 nav-head">{{links.title}}</h5>
+                      <ul class="nav-ul" *ngFor="let link of links.menu">
+                          <li class="nav-li">
+                              <a routerLink="{{link.url}}" class="nav-a body-sb">{{link.title}}</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-subscribe-otr">
+                  <app-subscribe></app-subscribe>
+              </div>
+          </div>
+      </div>
+  </div>
+
+<!--=======================================
+      Footer Section End Here
+========================================-->
+
+
+  <!--=======================================
+          Copy Section Start Here
+  ========================================-->
+
+  <div class="copy-otr">
+      <div class="container-fluid">
+          <div class="copy-inr">
+              <!-- <div class="language-selector">
+                  <ul class="language-ul">
+                      <li class="language-li">
+                          <a class="language-a">
+                              <img class="flag-img" src="assets/img/flag-img1.png" alt="flag-img">
+                              <p class="body-sb language">English</p>
+                              <svg class="caret-down" width="12" height="8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1.5l-5 5-5-5" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                          </a>
+                          <ul class="drop-ul">
+                              <li class="drop-li">
+                                  <a  class="drop-a">
+                                      <img class="flag-img" src="assets/img/flag-img1.png" alt="flag-img">
+                                      <p class="body-sb language">English</p>
+                                  </a>
+                              </li>
+                              <li class="drop-li">
+                                  <a  class="drop-a">
+                                      <img class="flag-img" src="assets/img/flag-img2.png" alt="flag-img">
+                                      <p class="body-sb language">Pakistan</p>
+                                  </a>
+                              </li>
+                              <li class="drop-li">
+                                  <a  class="drop-a">
+                                      <img class="flag-img" src="assets/img/flag-img3.png" alt="flag-img">
+                                      <p class="body-sb language">UAE</p>
+                                  </a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div> -->
+              <div class="copy-name body-s" style="margin: auto">
+                  Copyright © 2022 by <a href="https://niftyrow.io" target="_blank" class="name body-sb">Nifty Row.</a> All rights reserved.
+              </div>
+<!--              <div class="privacy-link">-->
+<!--                  <a  class="link body-sb" routerLink="/privacy">Privacy Policy</a>-->
+<!--&lt;!&ndash;                  <span class="dot">•</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <a class="link body-sb">Terms of Service</a>&ndash;&gt;-->
+<!--              </div>-->
+          </div>
+      </div>
+  </div>
+
+<!--=======================================
+      Copy Section End Here
+========================================-->

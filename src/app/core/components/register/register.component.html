@@ -1,0 +1,63 @@
+<p-dialog
+[breakpoints]="{'960px': '75vw', '640px': '100vw'}"
+position="top-right"
+[modal]="true" [baseZIndex]="10000"
+(onHide)="displayStatus.emit(true)"
+[(visible)]="display" [style]="{width: '30vw'}">
+<form class="login" *ngIf="!registered">
+  <h2>Create Account</h2>
+  <p>Please fill all fields below</p>
+  <input type="text"
+  id="fname"
+  name="fname"
+  [(ngModel)]="userData.firstName"
+  placeholder="First Name" />
+
+  <input type="text"
+  id="lname"
+  name="lname"
+  [(ngModel)]="userData.lastName"
+  placeholder="Last Name" />
+
+  <input type="text"
+  id="username"
+  name="username"
+  [(ngModel)]="userData.username"
+  placeholder="Username" />
+
+  <input type="email"
+  id="email"
+  name="email"
+  [(ngModel)]="userData.email"
+  placeholder="Email" />
+
+  <input type="password"
+  id="password"
+  name="password"
+  [(ngModel)]="userData.password"
+  placeholder="Password" />
+
+  <input type="text"
+  id="web"
+  name="web"
+  [(ngModel)]="userData.webUrl"
+  placeholder="Web Url (eg: www.facebook.com, www.twitter.com, web.telegram.com etc)" />
+
+  <input type="submit" (click)="registerUser()" value="Create Account" />
+  <div class="links">
+    <a (click)="changeToLogin()">Login</a>
+  </div>
+</form>
+<div class="login" *ngIf="registered">
+  <h2>Click to copy the private Key below</h2>
+  <p>You will need it if you ever lose your account or account details</p>
+  <div style="display: flex;">
+    <input (click)="copyMessage(privateKey)" readonly type="text" placeholder="{{privateKey}}">
+    <div class="copy-icon-otr icon-poz">
+      <svg (click)="copyMessage(privateKey)"  class="copy-icon" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.636 12.636H15a2 2 0 002-2V3a2 2 0 00-2-2H7.364a2 2 0 00-2 2v2.364" stroke="#CFCFCF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.636 5.364H3a2 2 0 00-2 2V15a2 2 0 002 2h7.636a2 2 0 002-2V7.364a2 2 0 00-2-2z" stroke="#CFCFCF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </div>
+  
+
+</div>
+</p-dialog>

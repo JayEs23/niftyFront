@@ -1,0 +1,64 @@
+[
+    {
+        "menuGroup": [
+            {
+                "title": "Navigation",
+                "menu": [
+                    {
+                        "title": "Home",
+                        "url": "/"
+                    },
+                    {
+                        "title": "About",
+                        "url": "/about"
+                    },
+                    {
+                        "title": "Contact Us",
+                        "url": "/contact"
+                    }
+                ]
+            },
+            {
+                "title": "Explore",
+                "menu": [
+                    {
+                        "title": "Artworks",
+                        "url": "/"
+                    },
+                    {
+                      "title": "Music",
+                      "url": "/"
+                    },
+                    {
+                      "title": "Movies",
+                      "url": "/"
+                    }
+                ]
+            },
+            {
+                "title": "Community",
+                "menu": [
+                    {
+                        "title": "FAQs",
+                        "url": "/faq"
+                    },
+                  {
+                    "title": "Privacy policy",
+                    "url": "/privacy"
+                  },
+                  {
+                    "title": "Terms of use",
+                    "url": "/terms-and-conditions"
+                  },
+                  {
+                    "title": "Refund Policy",
+                    "url": "/refund-policy"
+                  }
+                ]
+            }
+
+        ],
+        "logoPath": "/assets/img/Niftylogo2.png"
+
+    }
+]

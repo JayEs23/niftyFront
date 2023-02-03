@@ -1,0 +1,24 @@
+
+[
+    {
+      "slides":  [
+        {
+            "slider": "./assets/img/nifty_slider1.jpg",
+            "mobile": "./assets/img/m-slider-1.png",
+            "type": "Auction"
+        },
+        {
+          "slider": "./assets/img/nifty_slider2.jpg",
+          "mobile": "./assets/img/m-slider-2.png",
+          "type": "Auction"
+        },
+        {
+
+            "slider": "./assets/img/slider3.png",
+            "mobile": "./assets/img/m-slider-3.png",
+            "type": "Auction"
+        }
+      ],
+    "presentationType": "auction"
+    }
+]
