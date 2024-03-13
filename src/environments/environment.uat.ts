@@ -12,9 +12,12 @@ headers = headers.append('api-key', apiKey);
 export const environment: AppEnvironment = {
   production: true,
   headers: headers,
-  baseApiUrl: 'https://lb.niftyrow.io/api/yasuke/',
-  extraUrl: 'https://lb.niftyrow.io/yasuke-server/',
-  icoUrl: 'https://lb.niftyrow.io/api/ico/whitelist/',
+  baseApiUrl: 'https://172.245.9.26/api/yasuke/',
+  extraUrl: 'https://172.245.9.26/yasuke-server/',
+  icoUrl: 'https://172.245.9.26/api/ico/whitelist/',
+  // baseApiUrl: 'https://lb.niftyrow.io/api/yasuke/',
+  // extraUrl: 'https://lb.niftyrow.io/yasuke-server/',
+  // icoUrl: 'https://lb.niftyrow.io/api/ico/whitelist/',
   security: {
     allowedOrigins: 'https://niftyrow.io/'
   }
